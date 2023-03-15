@@ -4,7 +4,7 @@ public class Find {
                 1, 2, 3, 4, 5, 6, 7, 8, 9
         };
 //        System.out.println(find(array, 5));
-        System.out.println(binarySearch(array, 5, 0, array.length-1));
+        System.out.println(binarySearch(array,9));
     }
 
     public static int find(int[] array, int value) {
@@ -14,6 +14,9 @@ public class Find {
             }
         }
         return -1;
+    }
+    public static int binarySearch(int[] array, int value){
+        return binarySearch(array, value, 0, array.length-1);
     }
 
     public static int binarySearch(int[] array, int value, int min, int max) {
