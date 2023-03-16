@@ -1,14 +1,18 @@
+import java.util.Arrays;
+
 public class HeapSort {
 
     public static void main(String[] args) {
-        int[] array = new int[]{
-                4, 2, 5, 8, 1, 9, 2, 3, 6, 8, 5
-        };
+        int[] array = new int[]{4, 2, 5, 8, 1, 9, 2, 3, 6, 8, 5};
+        sort(array);
+        System.out.println(Arrays.toString(array));
     }
 
     public static void sort(int[] array) {
-        for (int i = array.length / 2 - 1; i >= 0; i--){
+        for (int i = array.length / 2 - 1; i >= 0; i--) {
             heapify(array, array.length, i);
+        }
+            for (int i = array.length - 1; i >= 0; i--){
             int temp = array[0];
             array[0] = array[i];
             array[i] = temp;
@@ -27,7 +31,7 @@ public class HeapSort {
         if (rightChild < heapSize && array[rightChild] > array[largest]) {
             largest = rightChild;
         }
-        if (largest != rootIndex){
+        if (largest != rootIndex) {
             int temp = array[rootIndex];
             array[rootIndex] = array[largest];
             array[largest] = temp;
