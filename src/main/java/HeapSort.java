@@ -3,7 +3,7 @@ import java.util.Arrays;
 public class HeapSort {
 
     public static void main(String[] args) {
-        int[] array = new int[]{4, 2, 5, 8, 1, 9, 2, 3, 6, 8, 5};
+        int[] array = new int[]{4, 2, 5, 8, 1, 9, 2, 3, 6, 8, 5, 15, 23, 11};
         sort(array);
         System.out.println(Arrays.toString(array));
     }
